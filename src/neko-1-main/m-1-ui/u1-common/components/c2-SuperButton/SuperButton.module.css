@@ -1,0 +1,54 @@
+.button {
+   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   line-height: 1;
+
+   display: inline-block;
+
+   cursor: pointer;
+
+   border: 0;
+   border-radius: .7em;
+   outline-style: none;
+}
+.button:hover {
+   opacity: .9;
+}
+
+.mouseDown {
+   opacity: .5 !important;
+}
+
+.primary {
+   background-color: #008cba;
+}
+.secondary {
+   background-color: #e7e7e7;
+}
+.success {
+   background-color: #4caf50;
+}
+.warning {
+   background-color: goldenrod;
+}
+.danger {
+   background-color: #f44336;
+}
+.small {
+   font-size: 12px;
+
+   padding: 10px 16px;
+}
+.medium {
+   font-size: 14px;
+
+   padding: 11px 20px;
+}
+.large {
+   font-size: 16px;
+
+   padding: 12px 24px;
+}
+.red {
+   background-color: red;
+}
