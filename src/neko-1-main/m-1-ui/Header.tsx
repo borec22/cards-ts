@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {
-    SIGN_IN_PATH, REGISTER_PATH, FORGOT_PATH,
-    NEKO_PATH
+   SIGN_IN_PATH, REGISTER_PATH, FORGOT_PATH,
+   NEKO_PATH, STAND_PATH
 } from './Routes';
 
 const Header: React.FC = () => {
@@ -22,6 +22,7 @@ const Header: React.FC = () => {
             {show && <NavLink to={FORGOT_PATH}>forgot</NavLink>}
 
             {show && <NavLink to={NEKO_PATH}>neko</NavLink>}
+            {show && <NavLink to={STAND_PATH}>stand</NavLink>}
         </div>
     );
 };
