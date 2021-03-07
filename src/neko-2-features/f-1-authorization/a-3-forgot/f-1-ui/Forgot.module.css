@@ -16,3 +16,22 @@
 .link {
    padding-top: 15px;
 }
+
+.success {
+   text-align: center;
+   color: lawngreen;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.error {
+   color: red;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.preloader {
+   color: orange;
+   font-weight: bold;
+   margin-bottom: 20px;
+}

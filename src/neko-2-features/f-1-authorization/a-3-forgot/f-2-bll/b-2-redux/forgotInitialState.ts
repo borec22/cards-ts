@@ -1,7 +1,11 @@
-export interface IForgotState { // blank
-
+export interface IForgotState {
+   isSuccess: boolean
+   error: string | null
+   isLoading: boolean
 }
 
-export const forgotInitialState: IForgotState = { // blank
-
+export const forgotInitialState: IForgotState = {
+   isSuccess: false,
+   error: null,
+   isLoading: false
 };
