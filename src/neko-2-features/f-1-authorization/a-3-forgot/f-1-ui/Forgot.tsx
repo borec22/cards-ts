@@ -17,7 +17,7 @@ const Forgot: React.FC<IForgotProps> = (
    {}
 ) => {
    const [email, setEmail] = useState<string>('');
-   console.log('render Forgot');
+   console.log('render SetPass');
    const dispatch = useDispatch();
    const isSuccess = useSelector<IAppStore, boolean>(state => state.forgot.isSuccess);
    const isLoading = useSelector<IAppStore, boolean>(state => state.forgot.isLoading);
@@ -50,12 +50,13 @@ const Forgot: React.FC<IForgotProps> = (
             <>
                {error && <div className={classes.error}>{error}</div>}
                {isLoading && <div className={classes.preloader}>in progress...</div>}
-               <div className={classes.forgotEmail}>
+               <div className={classes.formControl}>
                   <SuperInputText type={'email'}
                                   name={'email'}
                                   value={email}
                                   onChange={changeEmailHandler}
-                                  className={classes.forgotInput} placeholder='Enter your email:'
+                                  className={classes.forgotInput}
+                                  placeholder='Enter your email:'
                   />
                </div>
                <div>

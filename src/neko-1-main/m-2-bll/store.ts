@@ -4,11 +4,13 @@ import {signInReducer} from "../../neko-2-features/f-1-authorization/a-1-sign-in
 import {registerReducer} from "../../neko-2-features/f-1-authorization/a-2-register/r-2-bll/b-2-redux/registerReducer";
 import {forgotReducer} from "../../neko-2-features/f-1-authorization/a-3-forgot/f-2-bll/b-2-redux/forgotReducer";
 import {nekoReducer} from "../../neko-2-features/f-4-social/s-1-neko/n-2-bll/b-2-redux/nekoReducer";
+import {setPassReducer} from '../../neko-2-features/f-1-authorization/a-4-set-password/s-2-bll/b-2-redux/setPassReducer';
 
 const reducers = combineReducers({
     signIn: signInReducer,
     register: registerReducer,
     forgot: forgotReducer,
+    setPass: setPassReducer,
 
     neko: nekoReducer,
 });
