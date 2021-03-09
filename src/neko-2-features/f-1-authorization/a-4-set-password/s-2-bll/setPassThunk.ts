@@ -7,6 +7,8 @@ import {
    setNewPasswordSuccess
 } from './b-2-redux/setPassActions';
 import {ResponseErrorSetPasswordType, SetPassAPI} from '../s-3-dal/SetPassAPI';
+import {ResponseErrorForgotPasswordType} from '../../a-3-forgot/f-3-dal/ForgotAPI';
+import {setForgotError, setForgotLoading} from '../../a-3-forgot/f-2-bll/b-2-redux/forgotActions';
 //import {setForgotError, setForgotLoading} from '../../a-3-forgot/f-2-bll/b-2-redux/forgotActions';
 
 type Return = void;
@@ -22,13 +24,18 @@ export const setNewPassword = (password: string, token: string): ThunkAction<Ret
 
          const data = await SetPassAPI.setPassword(password, token);
 
-         dispatch(setNewPasswordLoading(false));
          dispatch(setNewPasswordSuccess(true));
 
       } catch (error) {
-         const data: ResponseErrorSetPasswordType = error.response.data;
+         if (error.response) {
+            const data: ResponseErrorSetPasswordType = error.response.data;
 
+            dispatch(setNewPasswordError(data.error));
+         } else {
+            dispatch(setNewPasswordError(error.message));
+         }
+
+      } finally {
          dispatch(setNewPasswordLoading(false));
-         dispatch(setNewPasswordError(data.error));
       }
    };

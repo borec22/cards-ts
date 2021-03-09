@@ -26,7 +26,7 @@ const Routes: React.FC = () => {
             <Route path={SIGN_IN_PATH} render={() => <SignInPage/>}/>
             <Route path={REGISTER_PATH} render={() => <RegisterPage/>}/>
             <Route path={FORGOT_PATH} render={() => <ForgotPage/>}/>
-            <Route path={'/set-new-password/:token'} render={() => <SetPassPage/>}/>
+            <Route path={SET_NEW_PASSWORD_PATH} render={() => <SetPassPage/>}/>
 
             <Route path={NEKO_PATH} render={() => <NekoPage/>}/>
             <Route path={STAND_PATH} render={() => <DemoSuperComponentsStand/>}/>

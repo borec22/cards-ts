@@ -7,7 +7,7 @@ export const ForgotAPI = {
             from: 'front-admin <serhioromanchuk@gmail.com>',
             message: `<div style="background-color: lime; padding: 15px">	
 	                         password recovery link: 		
-	                         <a href='http://localhost:3000/cards-ts/#/set-new-password/$token$'>link</a>
+	                         <a href='https://borec22.github.io/cards-ts/#/set-new-password/$token$'>link</a>
 	                      </div>`
 
          }
@@ -22,4 +22,10 @@ type ResponseForgotPasswordType = {
    success: boolean,
    answer: boolean,
    html: boolean
+}
+
+export type ResponseErrorForgotPasswordType = {
+   "error": string,
+   "body": boolean,
+   "in": string
 }
